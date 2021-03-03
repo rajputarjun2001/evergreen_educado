@@ -1,0 +1,67 @@
+<%- include("../partials/header") %>
+
+ <div class="review_container container">
+	<div class="rev_img">
+		<img src="<%=book.cover%>" alt="img" id="img">
+	</div>
+	<div>
+		
+		<h1 class="review_title"><%=book.name%> - <%=book.author%></h1>
+		<h3 class="review_subtitle">by <%=book.author%><br>Price: Rs <%=book.price%> <br>Amazon.in</h3>
+		<button class="btn">Pay</button>
+		<p class="rev_intro"><%=book.desc%></p>
+	</div>
+            
+	<div class="links_container container">
+
+		<h2 class="heading">
+			Jee Mains
+		</h2>
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Physics</button>
+			<div id="myDropdown" class="dropdown-content">
+			  <a href="#">DC Pandey</a>
+			  <a href="#">B1</a>
+			  <a href="#">Book 3</a>
+			</div>
+		</div>
+		<div class="dropdown1">
+			<button onclick="myFunction1()" class="dropbtn1">Chemistry</button>
+			<div id="myDropdown1" class="dropdown-content1">
+			  <a href="#">Link 1</a>
+			  <a href="#">Lik 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+		<div class="dropdown2">
+			<button onclick="myFunction2()" class="dropbtn2">Maths</button>
+			<div id="myDropdown2" class="dropdown-content2">
+			  <a href="#">Link 1</a>
+			  <a href="#">Link 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+		<div class="dropdown3">
+			<button onclick="myFunction3()" class="dropbtn3">Best Books</button>
+			<div id="myDropdown3" class="dropdown-content2">
+			  <a href="#">Link 1</a>
+			  <a href="#">Lol 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+		<h1 class="review_title">Reviews</h1>
+		<div class="masonry">
+		<% book.comments.forEach(function(comment){ %>
+			<div class="item">
+			  <p><%=comment.text%></p>
+			<!-- <form action="/cat/<%=book._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+				<a><button class="btn">Delete</button></a>
+			</form> -->
+			</div>
+		<% }) %>
+		</div>
+	</div>
+<%- include("../partials/footer") %>
