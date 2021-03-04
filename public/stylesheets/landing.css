@@ -201,7 +201,7 @@ nav #xyzabc{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 80px;
     margin-bottom: 70px;
 }
 
@@ -232,7 +232,7 @@ nav #xyzabc{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 350px;
+    width: 350px;
     height: 290px;
     margin: 10px;
     text-align: center;
@@ -250,7 +250,7 @@ nav #xyzabc{
 .container-boxes .box:hover{
     box-shadow: 0 5px 15px #445d6e;
     transition-timing-function: all ease-in-out;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
 }
 
 .container-boxes img{
@@ -327,7 +327,7 @@ nav #xyzabc{
     background-color: #276678;
 	background-attachment: scroll;
 	background-position: 50% 0%;
-	padding: 60px 0px;
+	padding: 50px;	
     position: relative;
     font-weight: 500;
 }
@@ -335,12 +335,7 @@ nav #xyzabc{
 .footer_box{
 	width: 100%;
 	height: auto;
-}
-
-.footer_box img{
-	width: 180px;
-	height: 350px;
-	margin-bottom: 20px;
+	padding-left: -20px;
 }
 
 .footer_box h2{
@@ -350,12 +345,13 @@ nav #xyzabc{
 	color: #f6f5f5;
 }
 
+
 .footer_box hr{
 	background: #f6f5f5;
 	width: 80px;
 	height: 3px;
 	border:none;
-	margin: 5px 0px 15px 0px;	
+		
 }
 
 .footer_box p{
