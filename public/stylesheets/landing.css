@@ -96,7 +96,7 @@ nav .navlinks a{
 }
 
 nav .navlinks a:hover{
-	color:yellow;
+	color:black;
 }
 
 nav .navlinks li{
@@ -154,6 +154,11 @@ nav #xyzabc{
     background-color: rgba(0, 0, 0,0.1);
     color: #f6f5f5;
     margin-right:10px;
+}
+
+.header-buttons a:hover{
+	background-color:black ;
+	cursor: pointer;
 }
 
 .header-content{
