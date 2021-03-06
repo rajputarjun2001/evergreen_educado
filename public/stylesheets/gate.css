@@ -106,7 +106,7 @@ nav .navlinks{
 
 nav .navlinks a:hover {
 	
-	color: yellow;
+	color: black;
 }
 
 nav .navlinks a{
@@ -167,6 +167,7 @@ nav .navlinks li{
 
 .header-buttons a:hover{
 	background-color:#f6f5f5;
+	cursor: pointer;
 }
 
 .gate-header-content{
