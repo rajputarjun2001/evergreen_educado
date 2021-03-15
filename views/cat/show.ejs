@@ -1,12 +1,14 @@
 <%- include("../partials/header") %>
 
+<h1 class="cat_review_title"><%=book.name%></h1>
  <div class="cat_review_container container">
 	<div class="cat_rev_img">
 		<img src="<%=book.cover%>" alt="img" id="cat_img">
-	</div>
-	<div>
 		
-		<h1 class="cat_review_title"><%=book.name%> - <%=book.author%></h1>
+	</div>
+	
+	<div>
+
 		<h3 class="cat_review_subtitle">by <%=book.author%><br>Price: Rs <%=book.price%> <br>Amazon.in</h3>
 		<button class="cat_btn">BUY</button>
 		<p class="cat_rev_intro"><%=book.desc%></p>
