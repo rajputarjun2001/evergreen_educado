@@ -11,6 +11,23 @@ body {
   font-weight: 300;
   font-size: 1rem; }
 
+  /*  Scrollbar*/
+
+::-webkit-scrollbar{
+  width:12px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background:linear-gradient(transparent,#000);
+    border-radius:6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(transparent,#276678);
+    
+  }
+  
+  
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
