@@ -147,6 +147,7 @@ nav #xyzabc{
 .header-buttons{
     margin-left: 100px;
     margin-top:35px;
+	z-index:9;
 }
 
 .header-buttons a{
@@ -186,6 +187,7 @@ nav #xyzabc{
 .header-wave{
     position:relative;
     bottom:240px;
+	/* z-index:-1; */
 }
 
 @keyframes example {
@@ -711,6 +713,10 @@ nav #xyzabc{
 @media screen and (max-width: 1300px){
 	.header-tagline{
 		font-size: 3.0rem;
+	}
+	.header-wave{
+		position:relative;
+		bottom:200px;
 	}
 }
 

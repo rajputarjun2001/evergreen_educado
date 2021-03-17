@@ -8,23 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/show.css"> 
-    <link rel="stylesheet" type="text/css" href="../stylesheets/landing.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/cat.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/civil.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/clat.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/cse.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/electrical.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/electronics.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/gate.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/jee.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/mechanical.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/nda.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/neet.css">
+	    <link rel="stylesheet" type="text/css" href="../stylesheets/landing.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/auth.css">
-	
-
-	
 	<title>Home</title>
 </head>
 <body onload="myFunction()">
@@ -36,7 +21,7 @@
 
 <!-- NAVBAR-->
 
-<nav class="navbar-fixed-top" >
+<nav class="navbar-fixed-top colored-nav" >
     <input id="nav-toggle" type="checkbox">
     <div class="logo"><a href="/">EverGreen Educado</a></div>
     <ul class="navlinks">
@@ -53,3 +38,11 @@
     </label>
 </nav>
 	
+<form class="auth container" action="/login" method="POST">
+    <h1 class="h3 mb-3 fw-normal text-center">Welcome Back</h1>
+    <input type="text"  class="form-control my-3" name="username" placeholder="Username" required autofocus>
+    <input type="password" id="inputPassword" class="form-control my-3 " name="password" placeholder="Password" required>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Evergreen Educado</p>
+</form>
+<%- include("partials/footer") %>

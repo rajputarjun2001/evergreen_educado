@@ -8,7 +8,18 @@
                     <div class="footer_box">
                         <!--<a href="#"><img src="yahan koi logo decide krna hai "></a>-->
                         <h3> EverGreen Educado</h3>
-                        <p> &copy 2021</p>
+                        <p> &copy; 2021</p>
+						<p>
+							<ul>
+							<% if(!currentUser){ %>
+							  <li class="nav-item"><a class="nav-link" href="/login">Login</a></li> 
+							  <li class="nav-item"><a class="nav-link" href="/register">SignUp</a></li>
+							  <% } else { %>
+							  <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+								<li class="nav-item"><a class="nav-link"><%=currentUser.username%></a></li>
+							  <% } %>
+						</ul>
+						</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">

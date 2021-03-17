@@ -4,8 +4,11 @@ var express = require("express"),
 	app = express(),
 	bodyparser = require("body-parser"),
 	mongoose = require("mongoose"),
+	passport = require("passport"),
+	localStrategy = require("passport-local"),
 	Cat = require("./models/cat"),
 	Comment = require("./models/reviews"),
+	User = require("./models/user"),
 	methodOverride = require("method-override");
 
 //=====================APP CONFIG==========================
@@ -15,6 +18,26 @@ app.use(bodyparser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser : true, useUnifiedTopology : true});
 app.use(methodOverride("_method"));
+
+
+//PASSPORT CONFIG
+
+app.use(require("express-session")({
+	secret : "Its all in the mind",
+	resave : false,
+	saveUninitialized : false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use(function(req,res,next){
+	res.locals.currentUser = req.user;
+	next();
+});
 
 // ===================ROUTES===============================
 
@@ -174,6 +197,41 @@ app.get("/contact-us",function(req,res){
 
 app.get("/about-us",function(req,res){
 	res.render("about/index");	
+});
+
+
+
+//AUTH routes
+
+app.get("/login",function(req,res){
+	res.render("login");
+});
+app.post("/login",passport.authenticate("local",{
+		successRedirect : "/",
+		failureRedirect : "/login"
+	}) ,function(req,res){
+});
+
+app.get("/register",function(req,res){
+	res.render("register");
+});
+
+app.post("/register",function(req,res){
+	let newUser = new User({username : req.body.username});
+	User.register(newUser,req.body.password,function(err,user){
+		if(err){
+			console.log(err)
+			return res.render("register");
+		}
+		passport.authenticate("local")(req,res,function(){
+			res.redirect("/");
+		});
+	});
+});
+
+app.get("/logout",function(req,res){
+	req.logout();
+	res.redirect("/");
 });
 
 //===========================RUNNING PORT===========================
