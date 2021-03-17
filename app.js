@@ -39,6 +39,19 @@ app.use(function(req,res,next){
 	next();
 });
 
+//middlewares
+
+let middlewareObj = {}; 
+middlewareObj.isAdmin = function(req,res,next){
+	if(req.user && req.user.username===process.env.ADMIN){
+		next();
+	}
+	else{
+		res.redirect("back");
+	}
+}
+
+
 // ===================ROUTES===============================
 
 app.get("/",function(req,res){
@@ -56,11 +69,11 @@ app.get("/cat",function(req,res){
 	});
 });
 
-app.get("/cat/new",function(req,res){
+app.get("/cat/new",middlewareObj.isAdmin,function(req,res){
 	res.render("cat/new");
 });
 	
-app.post("/cat",function(req,res){
+app.post("/cat",middlewareObj.isAdmin,function(req,res){
 	Cat.create(req.body.cat,function(err,newCatBook){
 		if(err)
 			console.log(err)
@@ -69,7 +82,7 @@ app.post("/cat",function(req,res){
 	});
 });
 
-app.get("/cat/:id/edit",function(req,res){
+app.get("/cat/:id/edit",middlewareObj.isAdmin,function(req,res){
 	Cat.findById(req.params.id,function(err,updateBook){
 		if(err)
 			console.log(err);
@@ -78,7 +91,7 @@ app.get("/cat/:id/edit",function(req,res){
 	});
 });
 
-app.put("/cat/:id",function(req,res){
+app.put("/cat/:id",middlewareObj.isAdmin,function(req,res){
 	Cat.findByIdAndUpdate(req.params.id,req.body.cat,function(err,updatedBook){
 		if(err)
 			console.log(err)
@@ -87,7 +100,7 @@ app.put("/cat/:id",function(req,res){
 	});
 });
 
-app.get("/cat/:id/delete",function(req,res){
+app.get("/cat/:id/delete",middlewareObj.isAdmin,function(req,res){
 	Cat.findByIdAndDelete(req.params.id,function(err){
 		if(err)
 			console.log("Didnt delete",err)
