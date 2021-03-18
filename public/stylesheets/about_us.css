@@ -73,6 +73,10 @@ h1, h2, h3, h4, h5,
   .display-1, .display-3 {
     font-size: 3rem; } }
 
+.about-space{
+  margin-top: -200px;
+}
+
 
 /* Blocks */
 
@@ -109,7 +113,9 @@ justify-content:space-around;  }
 {
 	color:red;
 }
-
+.spacing{
+  margin-top: -200px;
+}
 
 .abx
 {
