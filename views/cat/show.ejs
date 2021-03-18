@@ -59,9 +59,11 @@
 		<% book.comments.forEach(function(comment){ %>
 			<div class="cat_rev_item">
 			  <p><%=comment.text%></p>
-			<!-- <form action="/cat/<%=book._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+				<% if(currentUser && currentUser.username===process.env.ADMIN){ %>
+			<form action="/cat/<%=book._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
 				<a><button class="btn">Delete</button></a>
-			</form> -->
+			</form>
+				<% } %>
 			</div>
 		<% }) %>
 		</div>

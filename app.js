@@ -146,7 +146,7 @@ app.post("/cat/:id/comments",function(req,res){
 	});
 });
 
-app.delete("/cat/:id/comments/:comment_id",function(req,res){
+app.delete("/cat/:id/comments/:comment_id",middlewareObj.isAdmin,function(req,res){
 	Cat.findById(req.params.id,function(err,book){
 		if(err)
 			console.log(err)
