@@ -250,5 +250,6 @@ app.get("/logout",function(req,res){
 //===========================RUNNING PORT===========================
 
 app.listen(process.env.PORT || 3000,function(){
-	console.log("Server listening on port 3000!")
+	console.log("Server listening on port 3000!");
+	
 });
