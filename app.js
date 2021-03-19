@@ -17,7 +17,7 @@ var express = require("express"),
 app.set("view engine","ejs");
 app.use(bodyparser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
-mongoose.connect("mongodb://localhost:27017/random", {useNewUrlParser : true, useUnifiedTopology : true});
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser : true, useUnifiedTopology : true});
 app.use(methodOverride("_method"));
 
 
