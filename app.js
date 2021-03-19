@@ -7,6 +7,7 @@ var express = require("express"),
 	passport = require("passport"),
 	localStrategy = require("passport-local"),
 	Cat = require("./models/cat"),
+	Contact = require("./models/contact"),
 	Comment = require("./models/reviews"),
 	User = require("./models/user"),
 	methodOverride = require("method-override");
@@ -16,7 +17,7 @@ var express = require("express"),
 app.set("view engine","ejs");
 app.use(bodyparser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser : true, useUnifiedTopology : true});
+mongoose.connect("mongodb://localhost:27017/random", {useNewUrlParser : true, useUnifiedTopology : true});
 app.use(methodOverride("_method"));
 
 
@@ -204,14 +205,32 @@ app.get("/nda",function(req,res){
 	res.render("nda/index");	
 });
 
-app.get("/contact-us",function(req,res){
-	res.render("contact/index");	
-});
-
 app.get("/about-us",function(req,res){
 	res.render("about/index");	
 });
 
+// ------------------Contact-------------------------------------
+
+app.get("/contact-us",function(req,res){
+	res.render("contact/index");	
+});
+
+app.post("/contact-us",function(req,res){
+	var firstName = req.body.contact.firstName;
+	var lastName = req.body.contact.lastName;
+	var email = req.body.contact.email;
+	var mobile = req.body.contact.mobile;
+	var message = req.body.contact.message;
+	var newMessage = {firstName:firstName, lastName : lastName, email:email, mobile:mobile,message:message};
+	Contact.create(newMessage,function(err,newMessage){
+		if(err){
+			console.log(err)
+		}
+		else{
+			res.redirect("/contact-us");
+		}
+	});
+});
 
 
 //AUTH routes
@@ -251,5 +270,4 @@ app.get("/logout",function(req,res){
 
 app.listen(process.env.PORT || 3000,function(){
 	console.log("Server listening on port 3000!");
-	
 });
