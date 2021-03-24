@@ -34,6 +34,7 @@ nav{
     right: 0;
     top: 0;
     height: 10vh;
+	background: transparent;
 	
 }
 
@@ -107,21 +108,33 @@ nav .navlinks li{
     list-style: none;
 }
 
-nav #xyzabc{
+/* nav #xyzabc{
 	background-color:#276678;
 
-}
+} */
 
 #nav-toggle{
     position: absolute;
     top: -100px;
 }
 
-.navbar-fixed-top.scrolled {
-    background-color: rgb(39,102,120)!important;
-	transition: background-color 200ms linear;
-	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .4);
+nav.active{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 10vh;
+	background-color:#276678;
+	transition: 0.5s ease-in-out;
 }
+
+
+/* .navbar-fixed-top.scrolled {
+    background-color: rgb(39,102,120)!important; 
+	 transition: background-color 200ms linear;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .4);
+}  */
 
 .colored-nav{
 	background-color:#276678;

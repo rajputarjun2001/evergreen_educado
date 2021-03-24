@@ -46,7 +46,7 @@ width:12px;
 
 /* Navbar */
 
-nav{
+/* nav{
     position: fixed;
     z-index: 10;
     left: 0;
@@ -126,13 +126,24 @@ nav .navlinks li{
     position: absolute;
     top: -100px;
 }
+/* 
+.navbar-fixed-top{
+	background: transparent !important;
+} */
+
+/* nav #xyzabc{
+	background-color:#276678;
+
+}
 
 .navbar-fixed-top.scrolled {
-    background-color: rgb(39,102,120)!important;
+	background-color: rgb(39,102,120)!important;
 	transition: background-color 200ms linear;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .4);
 }
-
+.colored-nav{
+	background-color:#276678;
+} */ */
 
 
 /* Header */
