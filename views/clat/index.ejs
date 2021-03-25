@@ -44,11 +44,13 @@
   </section>
 
  <div class="clat-bookbox">
-    <div class="clat-boxes"><img src="../images/E1.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/E2.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/E3.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/E4.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/E5.jpeg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CLATENG'){ %>
+		<div class="clat-boxes">
+			<a href="/clat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="clat-subjects">
@@ -56,11 +58,13 @@
   </section>
 
   <div class="clat-bookbox">
-    <div class="clat-boxes"><img src="../images/GK1.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/GK2.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/GK3.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/GK4.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/GK5.jpeg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CLATCA'){ %>
+		<div class="clat-boxes">
+			<a href="/clat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="clat-subjects">
@@ -68,11 +72,13 @@
  </section>
 
  <div class="clat-bookbox">
-    <div class="clat-boxes"><img src="../images/LE1.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LE2.png" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LE3.png" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LE4.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LE5.jpeg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CLATLEGALR'){ %>
+		<div class="clat-boxes">
+			<a href="/clat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
 <section class="clat-subjects">
@@ -80,11 +86,13 @@
  </section>
 
  <div class="clat-bookbox">
-    <div class="clat-boxes"><img src="../images/LR1.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LR2.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LR3.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LR4.png" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/LR5.jpeg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CLATLGR'){ %>
+		<div class="clat-boxes">
+			<a href="/clat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
  
 <section class="clat-subjects">
@@ -92,11 +100,13 @@
  </section>
 
  <div class="clat-bookbox">
-    <div class="clat-boxes"><img src="../images/QA1.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/QA2.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/QA3.png" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/QA4.jpeg" alt="" ></div>
-    <div class="clat-boxes"><img src="../images/QA5.jpeg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CLATQT'){ %>
+		<div class="clat-boxes">
+			<a href="/clat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>    
 
 <%- include("../partials/footer") %>

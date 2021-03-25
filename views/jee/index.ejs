@@ -37,34 +37,40 @@
     <section class="jee-subjects">
         <h2> MATHS</h2>
     </section>
-    <div class="jee-bookbox">
-    <div class="jee-boxes"><img src="../images/jm1.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jm2.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jm6.jpg" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jm4.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jm5.jfif" alt="" ></div> 
-    </div>
+ <div class="jee-bookbox">
+	<% book.forEach(function(book){ if(book.bookId === 'JEEMATHS'){ %>
+		<div class="jee-boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+ </div>
 
     <section class="jee-subjects">
         <h2> PHYSICS</h2>
     </section>
     <div class="jee-bookbox">
-    <div class="jee-boxes"><img src="../images/jp1.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jp2.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jp3.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jp4.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jp5.jfif" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'JEEPHY'){ %>
+		<div class="jee-boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
     <section class="jee-subjects">
         <h2> CHEMISTRY</h2>
     </section>
     <div class="jee-bookbox">
-    <div class="jee-boxes"><img src="../images/jc1.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jc2.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jc3.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jc4.jfif" alt="" ></div>
-    <div class="jee-boxes"><img src="../images/jc5.jfif" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'JEECHEM'){ %>
+		<div class="jee-boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
     <section class="jee-subjects">

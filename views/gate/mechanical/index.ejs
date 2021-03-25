@@ -38,44 +38,52 @@
         <h2> ENGINEERING MATHEMATICS</h2>
     </section>
     <div class="mechanical-bookbox">
-    <div class="mechanical-boxes"><img src="../images/MA1.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/MA2.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/MA3.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/MA4.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/MA5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'MECHEM'){ %>
+		<div class="mechanical-boxes">
+			<a href="/gate-mechanical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
     <section class="mechanical-subjects">
         <h2> APPLIED MECHANICS and DESIGN</h2>
     </section>
     <div class="mechanical-bookbox">
-    <div class="mechanical-boxes"><img src="../images/gmm1.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmm2.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmm3.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmm4.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmm5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'MECHAMAD'){ %>
+		<div class="mechanical-boxes">
+			<a href="/gate-mechanical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>  
     </div>
 
     <section class="mechanical-subjects">
         <h2> FLUID MECHANICS and THERMAL SCIENCES </h2>
     </section>
     <div class="mechanical-bookbox">
-    <div class="mechanical-boxes"><img src="../images/gmmm1.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmmm2.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmmm3.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmmm4.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gmmm5.jpg" alt="" ></div> 
+     <% book.forEach(function(book){ if(book.bookId === 'MECHFMATS'){ %>
+		<div class="mechanical-boxes">
+			<a href="/gate-mechanical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
     <section class="mechanical-subjects">
         <h2> MATERIALS, MANUFACTURING, and INDUSTRIAL ENGINEERING </h2>
     </section>
     <div class="mechanical-bookbox">
-    <div class="mechanical-boxes"><img src="../images/gom1.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gom2.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gom3.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gom4.jpg" alt="" ></div>
-    <div class="mechanical-boxes"><img src="../images/gom5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'MECHMMAIE'){ %>
+		<div class="mechanical-boxes">
+			<a href="/gate-mechanical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>  
     </div>
 
 <%- include("../../partials/footer") %>

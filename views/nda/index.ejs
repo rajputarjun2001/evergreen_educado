@@ -44,11 +44,13 @@
   </section>
 
  <div class="nda-bookbox">
-    <div class="nda-boxes"><img src="../images/E1.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/E2.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/E3.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/E4.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/E5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'NDAENG'){ %>
+		<div class="nda-boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="nda-subjects">
@@ -56,11 +58,13 @@
   </section>
 
   <div class="nda-bookbox">
-    <div class="nda-boxes"><img src="../images/M1.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/M2.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/M3.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/M4.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/M5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'NDAMATHS'){ %>
+		<div class="nda-boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="nda-subjects">
@@ -68,11 +72,13 @@
  </section>
 
  <div class="nda-bookbox">
-    <div class="nda-boxes"><img src="../images/G1.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/G2.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/G3.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/G4.jpg" alt="" ></div>
-    <div class="nda-boxes"><img src="../images/G5.jpg" alt="" ></div> 
+  <% book.forEach(function(book){ if(book.bookId === 'NDAGA'){ %>
+		<div class="nda-boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
 

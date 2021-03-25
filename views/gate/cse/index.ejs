@@ -44,11 +44,13 @@
   </section>
 
  <div class="cse-bookbox">
-    <div class="cse-boxes"><img src="../images/MA1.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/MA2.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/MA3.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/MA4.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/MA5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CSEEM'){ %>
+		<div class="cse-boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="cse-subjects">
@@ -56,11 +58,13 @@
   </section>
 
   <div class="cse-bookbox">
-    <div class="cse-boxes"><img src="../images/CP1.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CP2.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CP3.jpeg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CP4.jpeg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CP5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CSEPADS'){ %>
+		<div class="cse-boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="cse-subjects">
@@ -68,11 +72,13 @@
  </section>
 
  <div class="cse-bookbox">
-    <div class="cse-boxes"><img src="../images/ALG1.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/ALG2.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/ALG3.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/ALG4.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/ALG5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CSEA'){ %>
+		<div class="cse-boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
 <section class="cse-subjects">
@@ -80,11 +86,13 @@
  </section>
 
  <div class="cse-bookbox">
-    <div class="cse-boxes"><img src="../images/CO1.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CO2.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CO3.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CO4.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/CO5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CSECD'){ %>
+		<div class="cse-boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
  
 <section class="cse-subjects">
@@ -92,11 +100,13 @@
  </section>
 
  <div class="cse-bookbox">
-    <div class="cse-boxes"><img src="../images/OS1.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/OS2.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/OS3.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/OS4.jpg" alt="" ></div>
-    <div class="cse-boxes"><img src="../images/OS5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CSEOS'){ %>
+		<div class="cse-boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div> 
 
 <%- include("../../partials/footer") %>

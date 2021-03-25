@@ -1,0 +1,71 @@
+<%- include("../../partials/header") %>
+
+<h1 class="cat_review_title"><%=book.name%></h1>
+ <div class="cat_review_container container">
+	<div class="cat_rev_img">
+		<img src="<%=book.cover%>" alt="img" id="cat_img">
+		
+	</div>
+	
+	<div>
+
+		<h3 class="cat_review_subtitle">by <%=book.author%><br>Price: Rs <%=book.price%> <br>Amazon.in</h3>
+		<button class="cat_btn">BUY</button>
+		<p class="cat_rev_intro"><%=book.desc%></p>
+	</div>
+            
+	<div class="cat_links_container container">
+
+		<h2 class="cat_rev_heading">
+			Jee Mains
+		</h2>
+		<div class="cat_rev_dropdown">
+			<button onclick="myFunction()" class="cat_rev_dropbtn">Physics</button>
+			<div id="myDropdown" class="cat_rev_dropdown-content">
+			  <a href="#">DC Pandey</a>
+			  <a href="#">B1</a>
+			  <a href="#">Book 3</a>
+			</div>
+		</div>
+		<div class="cat_rev_dropdown1">
+			<button onclick="myFunction1()" class="cat_rev_dropbtn1">Chemistry</button>
+			<div id="myDropdown1" class="cat_rev_dropdown-content1">
+			  <a href="#">Link 1</a>
+			  <a href="#">Lik 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+		<div class="cat_rev_dropdown2">
+			<button onclick="myFunction2()" class="cat_rev_dropbtn2">Maths</button>
+			<div id="myDropdown2" class="cat_rev_dropdown-content2">
+			  <a href="#">Link 1</a>
+			  <a href="#">Link 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+		<div class="cat_rev_dropdown3">
+			<button onclick="myFunction3()" class="cat_rev_dropbtn3">Best Books</button>
+			<div id="myDropdown3" class="cat_rev_dropdown-content2">
+			  <a href="#">Link 1</a>
+			  <a href="#">Lol 2</a>
+			  <a href="#">Link 3</a>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+		<h1 class="cat_review_title">Reviews</h1>
+		<div class="cat_rev_masonry">
+		<% book.comments.forEach(function(comment){ %>
+			<div class="cat_rev_item">
+			  <p><%=comment.text%></p>
+				<% if(currentUser && currentUser.username===process.env.ADMIN){ %>
+			<form action="/gate-cse/<%=book._id%>/reviews/<%=comment._id%>?_method=DELETE" method="POST">
+				<a><button class="btn">Delete</button></a>
+			</form>
+				<% } %>
+			</div>
+		<% }) %>
+		</div>
+	</div>
+<%- include("../../partials/footer") %>

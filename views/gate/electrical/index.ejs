@@ -44,11 +44,13 @@
   </section>
 
  <div class="electrical-bookbox">
-    <div class="electrical-boxes"><img src="../images/ELE1.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/ELE2.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/ELE3.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/ELE4.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/ELE5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'ELECEC'){ %>
+		<div class="electrical-boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="electrical-subjects">
@@ -56,11 +58,13 @@
   </section>
 
   <div class="electrical-bookbox">
-    <div class="electrical-boxes"><img src="../images/PE1.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PE2.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PE3.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PE4.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PE5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'ELECPE'){ %>
+		<div class="electrical-boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
  <section class="electrical-subjects">
@@ -68,11 +72,13 @@
  </section>
 
  <div class="electrical-bookbox">
-    <div class="electrical-boxes"><img src="../images/PS1.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PS2.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PS3.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PS4.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/PS5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'ELECPS'){ %>
+		<div class="electrical-boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 	
 	<section class="electrical-subjects">
@@ -80,11 +86,13 @@
  </section>
 
  <div class="electrical-bookbox">
-    <div class="electrical-boxes"><img src="../images/SAS1.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/SAS2.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/SAS3.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/SAS4.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/SAS5.jpg" alt="" ></div> 
+     <% book.forEach(function(book){ if(book.bookId === 'ELECSAS'){ %>
+		<div class="electrical-boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 	
 	<section class="electrical-subjects">
@@ -92,11 +100,13 @@
  </section>
 
  <div class="electrical-bookbox">
-    <div class="electrical-boxes"><img src="../images/MA1.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/MA2.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/MA3.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/MA4.jpg" alt="" ></div>
-    <div class="electrical-boxes"><img src="../images/MA5.jpg" alt="" ></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'ELECM'){ %>
+		<div class="electrical-boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
     </div>
 
 <%- include("../../partials/footer") %>

@@ -44,11 +44,13 @@
   </section>
 
  <div class="civil-bookbox">
-    <div class="civil-boxes"><img src="../images/MA1.jpg" alt="" ></div>
-    <div class="civil-boxes"><img src="../images/MA2.jpg" alt="" ></div>
-    <div class="civil-boxes"><img src="../images/MA3.jpg" alt="" ></div>
-    <div class="civil-boxes"><img src="../images/MA4.jpg" alt="" ></div>
-    <div class="civil-boxes"><img src="../images/MA5.jpg" alt="" ></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CIVILEM'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
  <section class="civil-subjects">
@@ -56,11 +58,13 @@
   </section>
 
   <div class="civil-bookbox">
-    <div class="civil-boxes"><img src="../images/SE1.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/SE2.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/SE3.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/SE4.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/SE5.jpg" alt="" width="225px" height="195px"></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CIVILSE'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
  <section class="civil-subjects">
@@ -68,11 +72,13 @@
  </section>
 
  <div class="civil-bookbox">
-    <div class="civil-boxes"><img src="../images/GT1.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/GT2.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/GT3.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/GT4.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/GT5.jpg" alt="" width="225px" height="195px"></div> 
+    <% book.forEach(function(book){ if(book.bookId === 'CIVILGE'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
 <section class="civil-subjects">
@@ -80,11 +86,13 @@
  </section>
 
  <div class="civil-bookbox">
-    <div class="civil-boxes"><img src="../images/WRE1.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/WRE2.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/WRE3.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/WRE4.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/WRE5.jpg" alt="" width="225px" height="195px"></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CIVILWRS'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
  
 <section class="civil-subjects">
@@ -92,11 +100,13 @@
  </section>
 
  <div class="civil-bookbox">
-    <div class="civil-boxes"><img src="../images/ENE1.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/ENE2.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/ENE3.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/ENE4.jpg" alt="" width="225px" height="195px"></div>
-    <div class="civil-boxes"><img src="../images/ENE5.jpg" alt="" width="225px" height="195px"></div> 
+   <% book.forEach(function(book){ if(book.bookId === 'CIVILEE'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>  
     
     <section class="civil-subjects">
@@ -104,11 +114,13 @@
     </section>
     
      <div class="civil-bookbox">
-        <div class="civil-boxes"><img src="../images/TE1.jpg" alt="" width="225px" height="195px"></div>
-        <div class="civil-boxes"><img src="../images/TE2.jpg" alt="" width="225px" height="195px"></div>
-        <div class="civil-boxes"><img src="../images/TE3.jpg" alt="" width="225px" height="195px"></div>
-        <div class="civil-boxes"><img src="../images/TE4.jpg" alt="" width="225px" height="195px"></div>
-        <div class="civil-boxes"><img src="../images/TE5.jpg" alt="" width="225px" height="195px"></div> 
+        <% book.forEach(function(book){ if(book.bookId === 'CIVILTE'){ %>
+		<div class="civil-boxes">
+			<a href="/gate-civil/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
         </div>
 
 <%- include("../../partials/footer") %>

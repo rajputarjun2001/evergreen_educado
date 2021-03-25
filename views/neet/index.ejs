@@ -44,35 +44,41 @@
   </section>
 
  <div class="neet-bookbox">
-    <div class="neet-boxes"><img src="../images/jp1.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jp2.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jp3.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jp4.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jp5.jfif" alt="" width="225px" height="195px"></div>  
-    </div>
+	<% book.forEach(function(book){ if(book.bookId === 'NEETPHY'){ %>
+    <div class="neet-boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+ </div>
 
  <section class="neet-subjects">
     <h3> CHEMISTRY </h3>
   </section>
 
   <div class="neet-bookbox">
-    <div class="neet-boxes"><img src="../images/jc1.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jc2.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jc3.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jc4.jfif" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jc5.jfif" alt="" width="225px" height="195px"></div> 
-    </div>
+   <% book.forEach(function(book){ if(book.bookId === 'NEETCHEM'){ %>
+    <div class="neet-boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+   </div>
 
  <section class="neet-subjects">
     <h3> BIOLOGY </h3>
  </section>
 
  <div class="neet-bookbox">
-    <div class="neet-boxes"><img src="../images/jb1.jpg" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jb2.jpg" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jb3.jpg" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jb4.jpg" alt="" width="225px" height="195px"></div>
-    <div class="neet-boxes"><img src="../images/jb5.jpg" alt="" width="225px" height="195px"></div>  
-    </div>
+   <% book.forEach(function(book){ if(book.bookId === 'NEETBIO'){ %>
+    <div class="neet-boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+  </div>
 
 <%- include("../partials/footer") %>
