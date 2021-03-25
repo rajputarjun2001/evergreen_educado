@@ -1,6 +1,6 @@
 var mongoose= require("mongoose");
 
-var newCatBook = new mongoose.Schema({
+var newBook = new mongoose.Schema({
 	name : String,
 	desc : String,
 	author : String,
@@ -15,4 +15,4 @@ var newCatBook = new mongoose.Schema({
    ]
 });
 
-module.exports= mongoose.model("Cat", newCatBook);
+module.exports= mongoose.model("Book", newBook);

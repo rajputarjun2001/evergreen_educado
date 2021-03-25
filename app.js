@@ -6,7 +6,7 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	passport = require("passport"),
 	localStrategy = require("passport-local"),
-	Cat = require("./models/cat"),
+	Book = require("./models/book"),
 	Contact = require("./models/contact"),
 	Comment = require("./models/reviews"),
 	User = require("./models/user"),
@@ -62,56 +62,16 @@ app.get("/",function(req,res){
 // --------------------CAT--------------------------------
 
 app.get("/cat",function(req,res){
-	Cat.find({},function(err,cat){
+	Book.find({},function(err,cat){
 		if(err)
 			console.log(err)
 		else
-		res.render("cat/index",{cat: cat});	
-	});
-});
-
-app.get("/cat/new",middlewareObj.isAdmin,function(req,res){
-	res.render("cat/new");
-});
-	
-app.post("/cat",middlewareObj.isAdmin,function(req,res){
-	Cat.create(req.body.cat,function(err,newCatBook){
-		if(err)
-			console.log(err)
-		else
-			res.redirect("/cat");
-	});
-});
-
-app.get("/cat/:id/edit",middlewareObj.isAdmin,function(req,res){
-	Cat.findById(req.params.id,function(err,updateBook){
-		if(err)
-			console.log(err);
-		else
-			res.render("cat/edit",{cat:updateBook});
-	});
-});
-
-app.put("/cat/:id",middlewareObj.isAdmin,function(req,res){
-	Cat.findByIdAndUpdate(req.params.id,req.body.cat,function(err,updatedBook){
-		if(err)
-			console.log(err)
-		else
-			res.redirect("/cat/"+req.params.id);
-	});
-});
-
-app.get("/cat/:id/delete",middlewareObj.isAdmin,function(req,res){
-	Cat.findByIdAndDelete(req.params.id,function(err){
-		if(err)
-			console.log("Didnt delete",err)
-		else
-			res.redirect("/cat")
+		res.render("cat/index",{book: cat});	
 	});
 });
 
 app.get("/cat/:id",function(req,res){
-	Cat.findById(req.params.id).populate("comments").exec(function(err,book){
+	Book.findById(req.params.id).populate("comments").exec(function(err,book){
 		if(err)
 			console.log(err);
 		else
@@ -119,8 +79,62 @@ app.get("/cat/:id",function(req,res){
 	});
 });
 
+// ---------------------------COMMON ROUTES---------------------------------
+
+app.get("/admin",function(req,res){
+	res.render("admin");
+});
+
+app.get("/admin/books",middlewareObj.isAdmin,function(req,res){
+	res.render("books/index");
+});
+
+app.get("/admin/books/new",middlewareObj.isAdmin,function(req,res){
+	res.render("books/new");
+});
+	
+app.post("/admin/books",middlewareObj.isAdmin,function(req,res){
+	Book.create(req.body.book,function(err,newBook){
+		if(err)
+			console.log(err)
+		else
+			res.redirect("/admin/books");
+	});
+});
+
+app.get("/admin/books/:id/edit",middlewareObj.isAdmin,function(req,res){
+	Book.findById(req.params.id,function(err,updateBook){
+		if(err)
+			console.log(err);
+		else
+			res.render("books/edit",{book:updateBook});
+	});
+});
+
+app.put("/admin/books/:id",middlewareObj.isAdmin,function(req,res){
+	Book.findByIdAndUpdate(req.params.id,req.body.book,function(err,updatedBook){
+		if(err)
+			console.log(err)
+		else
+			res.redirect("/admin/books");
+	});
+});
+
+app.get("/admin/books/:id/delete",middlewareObj.isAdmin,function(req,res){
+	Book.findByIdAndDelete(req.params.id,function(err){
+		if(err)
+			console.log("Didnt delete",err)
+		else
+			res.redirect("/cat")
+	});
+});
+
+// ---------------------------COMMENTS-------------------------------
+
+
+// CAT
 app.get("/cat/:id/comments/new",function(req,res){
-	Cat.findById(req.params.id,function(err,book){
+	Book.findById(req.params.id,function(err,book){
 		if(err)
 			console.log(err)
 		else
@@ -129,7 +143,7 @@ app.get("/cat/:id/comments/new",function(req,res){
 });
 
 app.post("/cat/:id/comments",function(req,res){
-	Cat.findById(req.params.id,function(err,book){
+	Book.findById(req.params.id,function(err,book){
 		if(err){
 			console.log(err);
 			res.redirect("/cat")
@@ -148,7 +162,7 @@ app.post("/cat/:id/comments",function(req,res){
 });
 
 app.delete("/cat/:id/comments/:comment_id",middlewareObj.isAdmin,function(req,res){
-	Cat.findById(req.params.id,function(err,book){
+	Book.findById(req.params.id,function(err,book){
 		if(err)
 			console.log(err)
 		else{
@@ -163,47 +177,7 @@ app.delete("/cat/:id/comments/:comment_id",middlewareObj.isAdmin,function(req,re
 	});
 });
 
-// ---------------------------------
-
-app.get("/jee-mains",function(req,res){
-	res.render("jee/index");	
-});
-
-app.get("/gate-categories",function(req,res){
-	res.render("gate/index");	
-});
-
-app.get("/gate-cse",function(req,res){
-	res.render("gate/cse/index");	
-});
-
-app.get("/gate-electrical",function(req,res){
-	res.render("gate/electrical/index");	
-});
-
-app.get("/gate-electronics",function(req,res){
-	res.render("gate/electronics/index");	
-});
-
-app.get("/gate-mechanical",function(req,res){
-	res.render("gate/mechanical/index");	
-});
-
-app.get("/gate-civil",function(req,res){
-	res.render("gate/civil/index");	
-});
-
-app.get("/clat",function(req,res){
-	res.render("clat/index");	
-});
-
-app.get("/neet",function(req,res){
-	res.render("neet/index");	
-});
-
-app.get("/nda",function(req,res){
-	res.render("nda/index");	
-});
+// ---------------------ABOUT-----------------------------
 
 app.get("/about-us",function(req,res){
 	res.render("about/index");	
@@ -233,7 +207,7 @@ app.post("/contact-us",function(req,res){
 });
 
 
-//AUTH routes
+//-------------------AUTH routes---------------------------
 
 app.get("/login",function(req,res){
 	res.render("login");

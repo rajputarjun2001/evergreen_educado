@@ -44,7 +44,7 @@
   </section>
 
  <div class="cat-bookbox">
-	<% cat.forEach(function(book){ if(book.bookId === 'VA'){ %>
+	<% book.forEach(function(book){ if(book.bookId === 'VA'){ %>
 		<div class="cat-boxes">
 			<a href="/cat/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
@@ -58,7 +58,7 @@
   </section>
 
   <div class="cat-bookbox">
-    <% cat.forEach(function(book){ if(book.bookId === 'QA'){ %>
+    <% book.forEach(function(book){ if(book.bookId === 'QA'){ %>
 		<div class="cat-boxes">
 			<a href="/cat/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
@@ -72,7 +72,7 @@
  </section>
 
  <div class="cat-bookbox">
-   <% cat.forEach(function(book){ if(book.bookId === 'DILR'){ %>
+   <% book.forEach(function(book){ if(book.bookId === 'DILR'){ %>
 		<div class="cat-boxes">
 			<a href="/cat/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
