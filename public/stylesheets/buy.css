@@ -1,0 +1,204 @@
+
+/* NAVBAR */
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 10vh;
+  background: transparent;
+  
+  }
+  
+  nav .logo a{
+    text-decoration: none;
+    color: #f6f5f5;
+  }
+  
+  nav .icon-burger{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav .icon-burger :hover{
+    cursor: pointer;
+  }
+  
+  nav .icon-burger .line{
+    width: 30px;
+    height: 5px;
+    background-color: #f6f5f5;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+  }
+  
+  nav .logo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-left:100px;
+    font-weight: bold;
+    color: #f6f5f5;
+  }
+  
+  nav .navlinks{
+    margin-right: 90px;
+    float:right;
+    padding: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav .navlinks a{
+    display: block;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f6f5f5;
+  }
+  
+  nav .navlinks a:hover{
+  color:black;
+  }
+  
+  .logo a:hover{
+  color: black;
+  }
+  
+  nav .navlinks li{
+    list-style: none;
+  }
+  
+  #nav-toggle{
+    position: absolute;
+    top: -100px;
+  }
+  
+  nav.active{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 10vh;
+  background-color:#276678;
+  transition: 0.5s ease-in-out;
+  }
+  
+  
+  .colored-nav{
+  background-color:#276678;
+  }
+  
+  
+  
+  img{
+      display: block;
+      box-align:left;
+      float:left;
+      background-color: #cecece36;
+      height: 300px;
+      width: 240px;
+      padding: 70px;
+      margin-left:120px;            
+  }
+  
+  h1.sub-heading {
+      
+      font-family:'Inter',sans-serif;
+      text-align: center;
+      color:darkcyan;
+      font-size: 30px;  
+      margin-right:365px;
+      
+  }
+  h2.book-author {
+      
+      font-family:'Inter',sans-serif;
+      text-align:center;
+      padding-right:450px;
+      color:indianred;
+      font-size: 25px;  
+  }
+  
+  h3.book-heading {
+      
+    font-family: 'Inter',sans-serif;
+    text-align:center;
+    font-size: 22px; 
+    color: darkgreen;
+    padding-right: 100px;
+    
+  }
+  h3.book-price {
+      
+      font-family: 'Inter',sans-serif;
+      text-align:center;
+      margin-right: 560px;  
+      font-size: 22px; 
+      color: darkgreen;
+  }
+  
+   p.stock-status{
+      font-family: 'Inter',sans-serif;
+      text-align: center;
+      margin-right:500px;
+      font-size: 21px;
+      color:lightgreen;   
+  }
+  /* Buy Button */
+  
+   #but-1 button{
+      background:purple;
+      color:#fff;
+      border:none;
+      position:relative;
+      height:40px;
+      width: 400px;
+      font-size:22px;
+      padding:8px;
+      cursor:pointer;
+      transition:800ms ease all;
+      outline:none;
+      margin-left: 42px;
+      font-family:'Inter',sans-serif;
+    }
+    #but-1 button:hover{
+      background:#fff;
+      color:#1AAB8A;
+    }
+    #but-1 button:before,button:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #1AAB8A;
+      transition:800ms ease all;
+    }
+    #but-1 button:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    #but-1 button:hover:before,button:hover:after{
+      width:100%;
+      transition:1500ms ease all;
+    }
+  
+  /* Product Info */
+  
