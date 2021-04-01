@@ -104,101 +104,140 @@ nav{
   
   
   
-  img{
-      display: block;
-      box-align:left;
-      float:left;
-      background-color: #cecece36;
-      height: 300px;
-      width: 240px;
-      padding: 70px;
-      margin-left:120px;            
-  }
+  .buy-container{
+    padding: 0px;
+    margin: 0;
+}
+
+
+.buy-img{
+    display: block;
+    box-align:left;
+    float:left;
+    background-color: #cecece36;
+    height: 300px;
+    width: 240px;
+    padding: 70px;
+}
+.sub-heading {
+    position: relative;
+    font-family:'Inter',sans-serif;
+    color:darkcyan;
+    font-size: 30px;  
+}
+.book-author {
+    font-family:'Inter',sans-serif;
+    color:indianred;
+    font-size: 25px;  
+}
+
+.book-heading {
+    
+  font-family: 'Inter',sans-serif;
+  font-size: 22px; 
+  color: darkgreen;
   
-  h1.sub-heading {
-      
-      font-family:'Inter',sans-serif;
-      text-align: center;
-      color:darkcyan;
-      font-size: 30px;  
-      margin-right:365px;
-      
-  }
-  h2.book-author {
-      
-      font-family:'Inter',sans-serif;
-      text-align:center;
-      padding-right:450px;
-      color:indianred;
-      font-size: 25px;  
-  }
-  
-  h3.book-heading {
-      
+}
+.book-price {
+    
     font-family: 'Inter',sans-serif;
-    text-align:center;
     font-size: 22px; 
     color: darkgreen;
-    padding-right: 100px;
-    
+}
+
+.stock-status{
+    font-family: 'Inter',sans-serif;
+    font-size: 21px;
+    color:lightgreen;   
+}
+/* Buy Button */
+
+ #but-1{
+    background:purple;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:22px;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    font-family:'Inter',sans-serif;
   }
-  h3.book-price {
-      
-      font-family: 'Inter',sans-serif;
-      text-align:center;
-      margin-right: 560px;  
-      font-size: 22px; 
-      color: darkgreen;
+  #but-1:hover{
+    background:#fff;
+    color:#1AAB8A;
   }
-  
-   p.stock-status{
-      font-family: 'Inter',sans-serif;
-      text-align: center;
-      margin-right:500px;
-      font-size: 21px;
-      color:lightgreen;   
+  #but-1:before,#but-1:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:800ms ease all;
   }
-  /* Buy Button */
-  
-   #but-1 button{
-      background:purple;
-      color:#fff;
-      border:none;
-      position:relative;
-      height:40px;
-      width: 400px;
-      font-size:22px;
-      padding:8px;
-      cursor:pointer;
-      transition:800ms ease all;
-      outline:none;
-      margin-left: 42px;
-      font-family:'Inter',sans-serif;
+  #but-1:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  #but-1:hover:before,#but-1:hover:after{
+    width:100%;
+    transition:1500ms ease all;
+  }
+
+/* Product Info */
+
+
+@media screen and (max-width: 768px){
+    .buy-container{
+        float: left;
+        width: 100%;
+        text-align: left;
+        padding-left: 30px;
     }
-    #but-1 button:hover{
-      background:#fff;
-      color:#1AAB8A;
+    .buy-img{
+        height: 40vh;
+        width: 50vw;
+        margin-left: 8vw;
     }
-    #but-1 button:before,button:after{
-      content:'';
-      position:absolute;
-      top:0;
-      right:0;
-      height:2px;
-      width:0;
-      background: #1AAB8A;
-      transition:800ms ease all;
+    .sub-heading {
+        text-align: left;
+        margin-right: 0px;
     }
-    #but-1 button:after{
-      right:inherit;
-      top:inherit;
-      left:0;
-      bottom:0;
+    .book-author {
+        text-align: left;
+        padding-right: 0px;
     }
-    #but-1 button:hover:before,button:hover:after{
-      width:100%;
-      transition:1500ms ease all;
+    .book-heading {
+        text-align:left;
+        padding-right: 0px;
+}
+    .stock-status{
+    text-align:left;
+    margin-right: 0px;
+}
+    #but-1{
+    width: 300px;
+    padding:0px;
+}
+}
+@media screen and (min-width: 770px){
+    .buy-container{
+        float: right;
+        width: 55%;
+        text-align: left;
     }
-  
-  /* Product Info */
-  
+    .buy-img{
+        margin-left:120px;  
+    }
+    #but-1{
+    width: 400px;
+    text-align: center;
+    padding:8px;
+}
+
+}
