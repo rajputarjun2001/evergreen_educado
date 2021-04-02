@@ -1,6 +1,6 @@
 // ======================REQUIRED=========================
 require("dotenv").config();
-var express = require("express"),
+let express = require("express"),
 	app = express(),
 	bodyparser = require("body-parser"),
 	mongoose = require("mongoose"),
@@ -10,7 +10,8 @@ var express = require("express"),
 	Contact = require("./models/contact"),
 	Comment = require("./models/reviews"),
 	User = require("./models/user"),
-	methodOverride = require("method-override");
+	methodOverride = require("method-override"),
+	nodemailer = require('nodemailer');
 
 //=====================APP CONFIG==========================
 
@@ -40,7 +41,7 @@ app.use(function(req,res,next){
 	next();
 });
 
-//middlewares
+//	MIDDLEWARES
 
 let middlewareObj = {}; 
 middlewareObj.isAdmin = function(req,res,next){
@@ -52,6 +53,15 @@ middlewareObj.isAdmin = function(req,res,next){
 	}
 }
 
+// NODEMAILER
+
+let mailTransporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: 'gbucseproject@gmail.com',
+		pass: 'gbucse@121'
+	}
+});
 
 // ===================ROUTES===============================
 
@@ -75,7 +85,7 @@ app.get("/cat/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("cat/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -96,7 +106,7 @@ app.get("/neet/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("neet/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -117,7 +127,7 @@ app.get("/jee-mains/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("jee/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -138,7 +148,7 @@ app.get("/clat/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("clat/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -159,7 +169,7 @@ app.get("/nda/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("nda/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -185,7 +195,7 @@ app.get("/gate-cse/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("gate/cse/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -205,7 +215,7 @@ app.get("/gate-electrical/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("gate/electrical/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -226,7 +236,7 @@ app.get("/gate-civil/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("gate/civil/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -247,7 +257,7 @@ app.get("/gate-electronics/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("gate/electronics/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -267,7 +277,7 @@ app.get("/gate-mechanical/:id",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("gate/mechanical/show",{book:book});
+			res.render("books/show",{book:book});
 	});
 });
 
@@ -797,17 +807,31 @@ app.get("/contact-us",function(req,res){
 });
 
 app.post("/contact-us",function(req,res){
-	var firstName = req.body.contact.firstName;
-	var lastName = req.body.contact.lastName;
-	var email = req.body.contact.email;
-	var mobile = req.body.contact.mobile;
-	var message = req.body.contact.message;
-	var newMessage = {firstName:firstName, lastName : lastName, email:email, mobile:mobile,message:message};
+	let firstName = req.body.contact.firstName;
+	let lastName = req.body.contact.lastName;
+	let email = req.body.contact.email;
+	let mobile = req.body.contact.mobile;
+	let message = req.body.contact.message;
+	let newMessage = {firstName:firstName, lastName : lastName, email:email, mobile:mobile,message:message};
 	Contact.create(newMessage,function(err,newMessage){
 		if(err){
 			console.log(err)
 		}
 		else{
+			let contactDetails = {
+				from: 'gbucseproject@gmail.com',
+				to: 'gbucseproject@gmail.com',
+				subject: req.body.contact.firstName + ' ' + req.body.contact.lastName + ' ' + 'has filled the Contact Form!',
+				text: `Hi! A new person has filled out the contact form.\nForm Details-\nName:${req.body.contact.firstName} ${req.body.contact.lastName}\nEmail: ${req.body.contact.email}\nMobile:${req.body.contact.mobile}\nMessage: ${req.body.contact.message}`
+			};
+			mailTransporter.sendMail(contactDetails, function(err, data) {
+				if(err) {
+					console.log('Error Occurs');
+					console.log(err);
+				} else {
+					console.log('Email sent successfully');
+				}
+			});
 			res.redirect("/contact-us");
 		}
 	});
