@@ -58,8 +58,8 @@ middlewareObj.isAdmin = function(req,res,next){
 let mailTransporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: 'gbucseproject@gmail.com',
-		pass: 'gbucse@121'
+		user: process.env.ADMINEMAIL,
+		pass: process.env.ADMINPASS
 	}
 });
 
