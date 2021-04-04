@@ -18,13 +18,13 @@ body{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
-.cat-animation-1{
+.animation-1{
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
-.cat-animation-1-item{
+.animation-1-item{
     width: inherit;
     height: inherit;
     position: absolute;
@@ -32,7 +32,7 @@ body{
     animation: cycleimages 30s infinite;
 }
 
-.cat-animation-1-item img{
+.animation-1-item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -40,21 +40,21 @@ body{
     opacity: 0.7;
 }
 
-.cat-animation-1-item:nth-child(1),
-.cat-animation-1-item:nth-child(1) img{
+.animation-1-item:nth-child(1),
+.animation-1-item:nth-child(1) img{
     animation-delay: 0s;
 }
-.cat-animation-1-item:nth-child(2),
-.cat-animation-1-item:nth-child(2) img{
+.animation-1-item:nth-child(2),
+.animation-1-item:nth-child(2) img{
     animation-delay: 9s;
 }
-.cat-animation-1-item:nth-child(3),
-.cat-animation-1-item:nth-child(3) img{
+.animation-1-item:nth-child(3),
+.animation-1-item:nth-child(3) img{
     animation-delay: 20s;
 }
 
 
-.cat-animation-1-item-text{
+.animation-1-item-text{
     max-width:50% ;
     position: absolute;
     top: 50%;
@@ -65,20 +65,20 @@ body{
     padding: 4.5rem 2rem;
     cursor:pointer;
 }
-.cat-animation-1-item-text h5{
+.animation-1-item-text h5{
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 2rem;
     font-weight: bold;
 }
-.cat-animation-1-item-text a{
+.animation-1-item-text a{
     text-decoration: none;
     color: #f6f5f5;
     font-weight: bold;
     font-size: 50px;
 }
-.cat-animation-1-item-text p{
+.animation-1-item-text p{
     letter-spacing: 2px;
     font-weight: bold;
     color: #f6f5f5;
@@ -105,7 +105,7 @@ body{
 #dots { color: #f6f5f5;}
 
 
-.cat-bookheading{
+.bookheading{
     display: block;
     width: auto;
     height: 12vh;
@@ -120,7 +120,7 @@ body{
     letter-spacing: 4px;
 }
 
-.cat-bookbox{
+.bookbox{
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
@@ -132,7 +132,7 @@ body{
     margin-bottom: 10px;
 }
 
-.cat-subjects{
+.subjects{
     display: block;
     width: auto;
     height: 9vh;
@@ -148,7 +148,7 @@ body{
     padding-top: 10px;
 }
 
-.cat-boxes{
+.boxes{
     height: 200px;
     width: 18vw;
     border: 3px solid #f6f5f5;
@@ -157,7 +157,7 @@ body{
     background-size: cover;
     /* border-radius: 5px; */
 }
-.cat-boxes img:hover{
+.boxes img:hover{
     box-shadow: 0 5px 15px #445d6e;
     transition-timing-function: all ease-in-out;
     transition-duration: 0.5s;
@@ -166,26 +166,26 @@ body{
 
 
 @media screen and (max-width: 1000px){
-    .cat-animation-1-item-text{
+    .animation-1-item-text{
         max-width: 70%;
         padding: 3rem 0.7rem;
     }
-    .cat-animation-1-item-text h5{
+    .animation-1-item-text h5{
         font-size: 3rem;
     }
 }
 @media screen and (max-width:767px){
-    .cat-animation-1-item-text{
+    .animation-1-item-text{
         max-width: 100%;
         padding: 2rem;
         top: initial;
         bottom: 0;
         transform: initial;
     }
-    .cat-animation-1-item-text h5{
+    .animation-1-item-text h5{
         font-size: 2rem;
     }
-    .cat-animation-1-item-text p{
+    .animation-1-item-text p{
         font-size: 1rem;
     }
     
