@@ -819,8 +819,8 @@ app.post("/contact-us",function(req,res){
 		}
 		else{
 			let contactDetails = {
-				from: 'gbucseproject@gmail.com',
-				to: 'gbucseproject@gmail.com',
+				from: process.env.ADMINEMAIL,
+				to: process.env.ADMINPASS,
 				subject: req.body.contact.firstName + ' ' + req.body.contact.lastName + ' ' + 'has filled the Contact Form!',
 				text: `Hi! A new person has filled out the contact form.\nForm Details-\nName:${req.body.contact.firstName} ${req.body.contact.lastName}\nEmail: ${req.body.contact.email}\nMobile:${req.body.contact.mobile}\nMessage: ${req.body.contact.message}`
 			};

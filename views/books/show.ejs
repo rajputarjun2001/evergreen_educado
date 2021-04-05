@@ -15,26 +15,21 @@
         <br>
         <br>
         <br>
-         <div class="buy-img"><img  src="../images/AD1.jpg" alt="image"></div>
+         <div class="buy-img"><img  src="<%=book.cover%>" alt="image"></div>
          <div class="buy-container">
-         <h1 class="sub-heading">Quantitative Aptitude</h1>
-         <h3 class="book-heading">How to Prepare for Quantitative Aptitude for the CAT </h3>
-         <h2 class="book-author">By Arun Sharma </h2>
-         <h3 class="book-price">$1478.7</h3>
+         <h1 class="sub-heading"><%=book.sectionName%></h1>
+         <h3 class="book-heading"><%=book.name%></h3>
+         <h2 class="book-author">By <%=book.author%></h2>
+         <h3 class="book-price">Rs. <%=book.price%></h3>
         <p class="stock-status">Seller : amazon </p>
         <br> 
-        <button id="but-1">Buy Now</button>        
+        <a href="<%=book.buyLink%>"><button id="but-1">Buy Now</button>    </a>    
               
        <!-- yahaan pr product info ka code aayegya space chod dena uske liye  -->
            
          <p class="product-info"> Product Info  <span class="plus"> + </span>
             <br>
-        <span class="more-info">Lorem ipsum dolor sit amet consectetur adipisic
-            ing elit. Harum tempore explicabo tenetur, unde molestias ipsum voluptatum
-            rem laboriosam earum alias repudiandae eveniet dolor adipisci, quo quia! Iure 
-            expedita aperiam odit quisquam veniam omnis explicabo, iste, repellendus inven
-            tore dolore, tempore tenetur dolorem vitae repellat molestias quo a consequuntu
-            r nam commodi!</span> </p> 
+        <span class="more-info"><%=book.desc%></span> </p> 
             
         
         </div>
@@ -55,7 +50,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="21.jpg"></div>
+                            <div class="testi-avatar"><img src=""></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 
@@ -73,7 +68,7 @@
                     <!--second--->
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="3.jpg"></div>
+                            <div class="testi-avatar"><img src=""></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                         
@@ -91,7 +86,7 @@
 
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="4.jpg"></div>
+                            <div class="testi-avatar"><img src=""></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 
@@ -109,7 +104,7 @@
                     <!--fourth-->
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="6.jpg"></div>
+                            <div class="testi-avatar"><img src=""></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                
