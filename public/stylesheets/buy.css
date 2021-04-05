@@ -191,27 +191,8 @@
 
 /* Reviews */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-html{
-	overflow-x: hidden;
-	height: 100%;
-}
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-body{
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-size: 13px;
-	text-align: center;
-	font-family: "Roboto";
-	background: #fcfcfd;
-}
-section{
+
+.revabc{
 	float: left;
 	position: relative;
 	padding: 30px 0;
