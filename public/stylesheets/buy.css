@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 .buy-img{
     display: block;
     box-align:left;
@@ -13,45 +12,37 @@
     width: 240px;
     padding:70px;
 }
+.buy-img img{
+    height: 300px;
+    width: 230px;
+}
 .sub-heading {
     position: relative;
     font-family:'Inter',sans-serif;
     color:darkcyan;
     font-size: 30px;  
-	margin-bottom:17px;
-	margin-left:-90px;
 }
 .book-author {
     font-family:'Inter',sans-serif;
     color:indianred;
     font-size: 25px;  
-	margin-bottom:17px;
-	margin-left:-90px;
 }
 
 .book-heading {
-    
   font-family: 'Inter',sans-serif;
   font-size: 22px; 
   color: darkgreen;
-  margin-bottom:17px;
-	margin-left:-90px;
 }
 .book-price {
-    
     font-family: 'Inter',sans-serif;
     font-size: 22px; 
     color: darkgreen;
-	margin-bottom:17px;
-	margin-left:-90px;
 }
 
 .stock-status{
     font-family: 'Inter',sans-serif;
     font-size: 21px;
     color:lightgreen; 
-	margin-bottom:17px;
-	margin-left:-90px;
 }
 
 /* -----------------------Buy Button------------------------------ */
@@ -69,8 +60,6 @@
     transition:800ms ease all;
     outline:none;
     font-family:'Inter',sans-serif;
-	 margin-bottom:17px;
-	 margin-left:-90px;
   }
   #but-1:hover{
     background:#fff;
@@ -109,8 +98,6 @@
     z-index: 100;
     padding: 5px;
     padding-top: 8px;
-	margin-bottom:50px;
-	margin-left:-90px;
 }
 .more-info{
    display: none;
@@ -124,7 +111,6 @@
     cursor:pointer;
     float: right;
 }
-
 
 
 
@@ -154,21 +140,25 @@
     .book-heading {
         text-align:left;
         padding-right: 0px;
-}
+    }
     .stock-status{
     text-align:left;
     margin-right: 0px;
-}
+    }
     #but-1{
     width: 300px;
     padding:0px;
-}
-.product-info{
+    }
+   .product-info{
     width: 300px;
     padding:0px;
+    }
+    .buy-img img{
+        height: 340px ;
+        width: 200px;
+    }
+}
 
-}
-}
 @media screen and (min-width: 770px){
     .buy-container{
         float: right;
@@ -191,9 +181,9 @@
 
 /* Reviews */
 
-	.abv{
-		font-size:10px;
-	}
+    .xyz{
+        height: 80vh;
+    }
 	.rbs{
-		font-size:10px;
+		font-size:30px;
 	}
