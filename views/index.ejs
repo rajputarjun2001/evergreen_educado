@@ -162,18 +162,21 @@
 </section>
 </section>
     
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+   
     
     <script>
+    var counter = document.querySelector(".counter"); 		
+var text = document.querySelector(".text");     
+let count=1; 		
+setInterval(() =>{ 			
+if (count<1000){ 				
+count++; 				
+counter.innerText = count; 			
+} 		
+}, 1);
     
-    if($('.counter').length){
-    $('.counter').counterUp({
-    delay:10,
-    time:3000
-    }); 
-    }
     </script>
     
 <br>

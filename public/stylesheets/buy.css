@@ -11,18 +11,22 @@
     background-color: #cecece36;
     height: 300px;
     width: 240px;
-    padding: 70px;
+    padding:70px;
 }
 .sub-heading {
     position: relative;
     font-family:'Inter',sans-serif;
     color:darkcyan;
     font-size: 30px;  
+	margin-bottom:17px;
+	margin-left:-90px;
 }
 .book-author {
     font-family:'Inter',sans-serif;
     color:indianred;
     font-size: 25px;  
+	margin-bottom:17px;
+	margin-left:-90px;
 }
 
 .book-heading {
@@ -30,19 +34,24 @@
   font-family: 'Inter',sans-serif;
   font-size: 22px; 
   color: darkgreen;
-  
+  margin-bottom:17px;
+	margin-left:-90px;
 }
 .book-price {
     
     font-family: 'Inter',sans-serif;
     font-size: 22px; 
     color: darkgreen;
+	margin-bottom:17px;
+	margin-left:-90px;
 }
 
 .stock-status{
     font-family: 'Inter',sans-serif;
     font-size: 21px;
-    color:lightgreen;   
+    color:lightgreen; 
+	margin-bottom:17px;
+	margin-left:-90px;
 }
 
 /* -----------------------Buy Button------------------------------ */
@@ -60,6 +69,8 @@
     transition:800ms ease all;
     outline:none;
     font-family:'Inter',sans-serif;
+	 margin-bottom:17px;
+	 margin-left:-90px;
   }
   #but-1:hover{
     background:#fff;
@@ -98,6 +109,8 @@
     z-index: 100;
     padding: 5px;
     padding-top: 8px;
+	margin-bottom:50px;
+	margin-left:-90px;
 }
 .more-info{
    display: none;
@@ -175,3 +188,12 @@
 }
 
 }
+
+/* Reviews */
+
+	.abv{
+		font-size:10px;
+	}
+	.rbs{
+		font-size:10px;
+	}

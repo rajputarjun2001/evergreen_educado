@@ -1,9 +1,9 @@
 <%- include("../partials/header") %>
 
-   <div class="neet-animation-1">
-       <div class="neet-animation-1-item">
+   <div class="animation-1">
+       <div class="animation-1-item">
            <img src="../images/NEET.jpg">
-           <div class="neet-animation-1-item-text">
+           <div class="animation-1-item-text">
                <h5>Quiz</h5>
                <a href="#">
                 <p> Wanna do some questions.</p>  
@@ -12,9 +12,9 @@
        </div>
 
        
-        <div class="neet-animation-1-item">
+        <div class="animation-1-item">
             <img src="../images/NEET2.jpg">
-            <div class="neet-animation-1-item-text">
+            <div class="animation-1-item-text">
                 <h5>Quiz</h5>
                 <a href="#">
                  <p> Wanna do some questions.</p>  
@@ -23,9 +23,9 @@
         </div>
 
         
-            <div class="neet-animation-1-item">
+            <div class="animation-1-item">
                 <img src="../images/NEET3.jpg">
-                <div class="neet-animation-1-item-text">
+                <div class="animation-1-item-text">
                     <h5>Quiz</h5>
                     <a href="#">
                      <p> Wanna do some questions.</p>  
@@ -35,17 +35,17 @@
    </div>
 
 
-   <section class="neet-bookheading">
+   <section class="bookheading">
     <h1>NEET</h1>
   </section>
 
-  <section class="neet-subjects">
+  <section class="subjects">
     <h3>PHYSICS</h3>
   </section>
 
- <div class="neet-bookbox">
+ <div class="bookbox">
 	<% book.forEach(function(book){ if(book.bookId === 'NEETPHY'){ %>
-    <div class="neet-boxes">
+    <div class="boxes">
 		<a href="/neet/<%= book._id %>">
 			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 		</a>
@@ -53,13 +53,13 @@
 	 <% }}) %>
  </div>
 
- <section class="neet-subjects">
+ <section class="subjects">
     <h3> CHEMISTRY </h3>
   </section>
 
-  <div class="neet-bookbox">
+  <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'NEETCHEM'){ %>
-    <div class="neet-boxes">
+    <div class="boxes">
 		<a href="/neet/<%= book._id %>">
 			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 		</a>
@@ -67,13 +67,13 @@
 	 <% }}) %>
    </div>
 
- <section class="neet-subjects">
+ <section class="subjects">
     <h3> BIOLOGY </h3>
  </section>
 
- <div class="neet-bookbox">
+ <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'NEETBIO'){ %>
-    <div class="neet-boxes">
+    <div class="boxes">
 		<a href="/neet/<%= book._id %>">
 			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 		</a>

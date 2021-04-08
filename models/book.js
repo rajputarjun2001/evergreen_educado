@@ -7,6 +7,8 @@ var newBook = new mongoose.Schema({
 	price : String,
 	cover : String,
 	bookId : String,
+	buyLink: String,
+	sectionName: String,
 	comments: [
       {
          type: mongoose.Schema.Types.ObjectId,

@@ -1,9 +1,9 @@
 <%- include("../../partials/header") %>
 
-   <div class="electronics-animation-1">
-       <div class="electronics-animation-1-item">
+   <div class="animation-1">
+       <div class="animation-1-item">
            <img src="../images/bi3.jpeg">
-           <div class="electronics-animation-1-item-text">
+           <div class="animation-1-item-text">
                <h5>Quiz</h5>
                <a href="#">
                 <p> Wanna do some questions.</p>  
@@ -12,9 +12,9 @@
        </div>
 
        
-        <div class="electronics-animation-1-item">
+        <div class="animation-1-item">
             <img src="../images/bi2.jpeg">
-            <div class="electronics-animation-1-item-text">
+            <div class="animation-1-item-text">
                 <h5>Quiz</h5>
                 <a href="#">
                  <p> Wanna do some questions.</p>  
@@ -23,9 +23,9 @@
         </div>
 
         
-            <div class="electronics-animation-1-item">
+            <div class="animation-1-item">
                 <img src="../images/bi1.jpeg">
-                <div class="electronics-animation-1-item-text">
+                <div class="animation-1-item-text">
                     <h5>Quiz</h5>
                     <a href="#">
                      <p> Wanna do some questions.</p>  
@@ -35,17 +35,17 @@
    </div>
 
 
-   <section class="electronics-bookheading">
+   <section class="bookheading">
     <h1>ELECTRONICS</h1>
   </section>
 
-  <section class="electronics-subjects">
+  <section class="subjects">
     <h3>ENGINEERING MATHEMATICS</h3>
   </section>
 
- <div class="electronics-bookbox">
+ <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'EEM'){ %>
-		<div class="electronics-boxes">
+		<div class="boxes">
 			<a href="/gate-electronics/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 			</a>
@@ -53,13 +53,13 @@
 	<% }}) %> 
     </div>
 
- <section class="electronics-subjects">
+ <section class="subjects">
     <h3> ANALOG AND DIGITAL ELECTRONICS </h3>
   </section>
 
-  <div class="electronics-bookbox">
+  <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'EAADE'){ %>
-		<div class="electronics-boxes">
+		<div class="boxes">
 			<a href="/gate-electronics/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 			</a>
@@ -67,13 +67,13 @@
 	<% }}) %>  
     </div>
 
- <section class="electronics-subjects">
+ <section class="subjects">
     <h3> ELECTRICAL MACHINES</h3>
  </section>
 
- <div class="electronics-bookbox">
+ <div class="bookbox">
     <% book.forEach(function(book){ if(book.bookId === 'EELECM'){ %>
-		<div class="electronics-boxes">
+		<div class="boxes">
 			<a href="/gate-electronics/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 			</a>
@@ -81,13 +81,13 @@
 	<% }}) %> 
     </div>
 
-<section class="electronics-subjects">
+<section class="subjects">
     <h3>  ELECTRIC CIRCUITS</h3>
  </section>
 
- <div class="electronics-bookbox">
+ <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'EEC'){ %>
-		<div class="electronics-boxes">
+		<div class="boxes">
 			<a href="/gate-electronics/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 			</a>
@@ -95,13 +95,13 @@
 	<% }}) %> 
     </div>
  
-<section class="electronics-subjects">
+<section class="subjects">
     <h3>SIGNALS AND SYSTEMS</h3>
  </section>
 
- <div class="electronics-bookbox">
+ <div class="bookbox">
    <% book.forEach(function(book){ if(book.bookId === 'ESAS'){ %>
-		<div class="electronics-boxes">
+		<div class="boxes">
 			<a href="/gate-electronics/<%= book._id %>">
 				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
 			</a>
