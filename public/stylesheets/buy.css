@@ -4,18 +4,20 @@
 }
 
 .buy-img{
-    display: block;
+    
     box-align:left;
     float:left;
+    background-color: #cecece36;
+    height: 350px;
+    width: 330px;
     
-    height: 300px;
-    width: 240px;
-    padding:70px;
-    margin-top: -60px;
 }
 .buy-img img{
     height: 300px;
     width: 230px;
+    display: block;
+    margin-left: 50px;
+    margin-top: 27px;
 }
 .sub-heading {
     position: relative;
@@ -62,6 +64,7 @@
     outline:none;
     font-family:'Inter',sans-serif;
     margin-bottom: 20px;
+    
   }
   #but-1:hover{
     background:#fff;
@@ -99,9 +102,10 @@
     color:whitesmoke;
     font-family:'Inter',sans-serif;
     z-index: 100;
-    padding: 10px;
-    padding-top: 8px;
+    padding: 8px;
+    padding-top: 7px;
     
+   
 }
 
 .more-info{
