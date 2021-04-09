@@ -54,7 +54,7 @@
     color:#fff;
     border:none;
     position:relative;
-    height:40px;
+    height:46px;
     font-size:22px;
     cursor:pointer;
     transition:800ms ease all;
@@ -90,13 +90,14 @@
 /* --------------------------Product Info------------------------------ */
 /* --------------------------Product Info------------------------------ */
 
+
 .product-info{
     font-size:22px;
-    background-color: papayawhip;
-    color: rebeccapurple;
+    background-color:#993CF3;
+    color:whitesmoke;
     font-family:'Inter',sans-serif;
     z-index: 100;
-    padding: 5px;
+    padding: 10px;
     padding-top: 8px;
 }
 .more-info{
@@ -104,10 +105,10 @@
 }
 .product-info.showmore .more-info{
     display: block;
-    background-color: papayawhip;
+    background-color: brown;
 }
 .plus{
-    font-size: 30px;
+    font-size: 26px;
     cursor:pointer;
     float: right;
 }
