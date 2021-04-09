@@ -131,6 +131,7 @@
         height: 40vh;
         width: 50vw;
         margin-left: 8vw;
+        margin-bottom: 120px;
     }
     .sub-heading {
         text-align: left;
@@ -151,6 +152,7 @@
     #but-1{
     width: 300px;
     padding:0px;
+    
     }
    .product-info{
     width: 300px;
