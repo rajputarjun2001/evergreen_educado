@@ -7,10 +7,11 @@
     display: block;
     box-align:left;
     float:left;
-    background-color: #cecece36;
+    
     height: 300px;
     width: 240px;
     padding:70px;
+    margin-top: -60px;
 }
 .buy-img img{
     height: 300px;
@@ -60,6 +61,7 @@
     transition:800ms ease all;
     outline:none;
     font-family:'Inter',sans-serif;
+    margin-bottom: 20px;
   }
   #but-1:hover{
     background:#fff;
