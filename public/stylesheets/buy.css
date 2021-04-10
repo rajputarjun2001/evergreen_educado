@@ -21,29 +21,29 @@
 }
 .sub-heading {
     position: relative;
-    font-family:'Inter',sans-serif;
+    font-family:'Roboto', sans-serif;
     color:darkcyan;
     font-size: 30px;  
 }
 .book-author {
-    font-family:'Inter',sans-serif;
+    font-family:'Roboto', sans-serif;
     color:indianred;
     font-size: 25px;  
 }
 
 .book-heading {
-  font-family: 'Inter',sans-serif;
+  font-family: 'Roboto', sans-serif;;
   font-size: 22px; 
   color: darkgreen;
 }
 .book-price {
-    font-family: 'Inter',sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 22px; 
     color: darkgreen;
 }
 
 .stock-status{
-    font-family: 'Inter',sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 21px;
     color:lightgreen; 
 }
@@ -102,7 +102,7 @@
     color:whitesmoke;
     font-family:'Inter',sans-serif;
     z-index: 100;
-    padding: 8px;
+    padding: 7px;
     padding-top: 7px;
     
    
