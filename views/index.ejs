@@ -117,7 +117,7 @@
     <section class="one">
     <div class="container">
         <div class="service-heading">
-            <hr><h2>Stats</h2><hr>
+            <hr><h2>Our Statistics</h2><hr>
         </div>
     <br><br>
     <div class="row">
@@ -167,15 +167,18 @@
    
     
     <script>
-    var counter = document.querySelector(".counter"); 		
-var text = document.querySelector(".text");     
-let count=1; 		
-setInterval(() =>{ 			
-if (count<1000){ 				
-count++; 				
-counter.innerText = count; 			
-} 		
-}, 1);
+    var counter = document.querySelectorAll(".counter"); 		
+    var text = document.querySelectorAll(".text");     
+    for(let i=0;i<counter.length;i++){
+        let count=1; 
+        setInterval(() =>{ 			
+            if (count<1000){ 				
+                count++; 				
+                counter[i].innerText = count; 			
+            } 		
+        }, 1);
+    }		
+    
     
     </script>
     
