@@ -1,4 +1,22 @@
-<%- include("../../partials/header") %>
+
+<!-- NAVBAR-->
+
+<nav class="navbar-fixed-top colored-nav" >
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo"><a href="/">EverGreen Educado</a></div>
+    <ul class="navlinks">
+        <li> <a href="/"> HOME </a> </li>
+        <li> <a href="/#books-locate"> BOOKS </a> </li>
+        <li> <a href="#"> FUN </a> </li>
+        <li> <a href="/about-us"> ABOUT </a> </li>
+        <li> <a href="/contact-us"> CONTACT </a> </li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+</nav>
 
 <div class="d-flex justify-content-center">
 	<form action="/cat/<%= book._id %>/reviews" method="POST" class="form py-3">
