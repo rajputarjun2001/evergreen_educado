@@ -522,8 +522,3 @@ nav.active{
 .colored-nav{
 	background-color:#276678;
 }
-
-nav#colored-nav a
-{
-	background-color: #000000;
-}
