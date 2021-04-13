@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet"   href="../stylesheets/comp.css">
     <link rel="preconnect"   href="https://fonts.gstatic.com">
-    <<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
@@ -42,7 +42,6 @@
         <br>
         <br>
         <br>
-		<div class="xyz">
          <div class="buy-img"><img  src="<%=book.cover%>" alt="image"></div>
          <div class="buy-container">
          <h1 class="sub-heading"><%=book.sectionName%></h1>
@@ -51,18 +50,16 @@
          <h3 class="book-price">Rs. <%=book.price%></h3>
         <p class="stock-status">Seller : amazon </p>
         <br> 
-        <a href="<%=book.buyLink%>"><button id="but-1">Buy Now</button>    </a>    
+        <a href="<%=book.buyLink%>"><button id="but-1">Buy Now</button>    </a>   
                          
          <p class="product-info"> Product Info  <span class="plus"> + </span>
             <br>
             
         <span class="more-info"><%=book.desc%></span> </p> 
-            
-
-		</div>
-        </div>
-
-<section id="testim" class="testim">
+    </div>
+  
+        
+<div id="testim" class="testim">
                 <div class="wrap">
     
                     <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
@@ -81,12 +78,14 @@
                     </div>
     
                 </div>
-        </section>
-    
+            </div>
+      
+
+
+        
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
     
 
     <script src="../js/app.js"> </script> 
         <script src="../js/buy.js"> </script>
-        </body>
-        </html>
+    

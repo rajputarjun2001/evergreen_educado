@@ -2,7 +2,7 @@
 
 nav{
     position: fixed;
-    z-index: 10;
+    z-index: 90000000;
     left: 0;
     right: 0;
     top: 0;
@@ -88,7 +88,7 @@ nav .navlinks li{
 
 nav.active{
     position: fixed;
-    z-index: 10;
+    z-index: 9000000;
     left: 0;
     right: 0;
     top: 0;
@@ -321,7 +321,7 @@ nav.active{
     nav .navlinks{
         float: none;
         position: fixed;
-        z-index: 9;
+        z-index: 90000;
         left: 0;
         right: 0;
         top: 10vh;
