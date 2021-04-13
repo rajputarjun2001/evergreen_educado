@@ -1,6 +1,11 @@
+.buy-page-content{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
 .buy-container{
     padding: 0px;
-    margin: 0;
+    margin-left:700px;
 }
 
 .buy-img{
@@ -99,7 +104,6 @@
     padding: 7px;
     padding-top: 7px;
     position: relative;
-   
 }
 
 .more-info{
@@ -117,14 +121,9 @@
     float: right;
 }
 
-
-
-
-
-
 @media screen and (max-width: 768px){
     .buy-container{
-        float: left;
+        /* float: left; */
         width: 100%;
         text-align: left;
         padding-left: 30px;
@@ -133,7 +132,6 @@
         height: 50vh;
         width: 80vw;
         margin-left: 8vw;
-       
     }
     .sub-heading {
         text-align: left;
@@ -148,17 +146,16 @@
         padding-right: 0px;
     }
     .stock-status{
-    text-align:left;
-    margin-right: 0px;
+        text-align:left;
+        margin-right: 0px;
     }
     #but-1{
-    width: 300px;
-    padding:0px;
-    
+        width: 300px;
+        padding:0px;
     }
    .product-info{
-    width: 300px;
-    padding:0px;
+        width: 300px;
+        padding:0px;
     }
     .buy-img img{
         height: 340px ;
@@ -177,8 +174,8 @@
 
 @media screen and (min-width: 770px){
     .buy-container{
-        float: right;
-        width: 55%;
+        /* float: right;
+        width: 55%; */
         text-align: left;
     }
     .buy-img{
@@ -221,16 +218,16 @@
     height: auto;
     font-size: 16px;
     font-family: Dubai-Light;
-		background: rgba(30,30,30);
-		width: 100%;
-		position: absolute;
-		top: 50%;
-        margin-top: 500px;
-		-webkit-transform: translatey(-50%);
-		-moz-transform: translatey(-50%);
-		-ms-transform: translatey(-50%);
-		-o-transform: translatey(-50%);
-		transform: translatey(-50%);
+    background: rgba(30,30,30);
+    /* position: absolute;
+    top: 50%; */
+    margin-top: 300px;
+    margin-bottom:-170px;
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
 }
 
 /* .testim .wrap {
@@ -288,7 +285,7 @@
     left: 0;
     display: block;
     /* z-index: 3333; */
-		height: 12px;
+	height: 12px;
 }
 
 .testim .dots .dot {
@@ -324,7 +321,7 @@
     
 .testim .cont {
     position: relative;
-		overflow: hidden;
+	overflow: hidden;
 }
 
 .testim .cont > div {
@@ -810,24 +807,7 @@
 	}
 
 }
-    
 
 .colored-nav{
 	background-color:#276678;
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
