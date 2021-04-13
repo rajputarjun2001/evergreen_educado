@@ -1,7 +1,14 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/comp.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
 <!-- NAVBAR-->
+<body>
 
-<nav class="navbar-fixed-top colored-nav" >
+<nav>
+ <div class="navbar-fixed-top" id="colored-nav">
     <input id="nav-toggle" type="checkbox">
     <div class="logo"><a href="/">EverGreen Educado</a></div>
     <ul class="navlinks">
@@ -16,8 +23,19 @@
         <div class="line"></div>
         <div class="line"></div>
     </label>
+ </div>
 </nav>
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ 
 <div class="d-flex justify-content-center">
 	<form action="/cat/<%= book._id %>/reviews" method="POST" class="form py-3">
 		<h5 class="mb-4 text-left">Leave a review</h5>
@@ -32,5 +50,8 @@
 		</div>
 	</form>
 </div>
-
 <%- include("../../partials/footer") %>
+<script src="/js/app.js"> </script> 
+</body>
+</html>
+

@@ -98,9 +98,6 @@ nav.active{
 }
 
 
-.colored-nav{
-	background-color:#276678;
-}
 
 /* NavBar Ends */
 
@@ -521,3 +518,12 @@ nav.active{
 }
 
 /* Page Loader Ends */
+
+.colored-nav{
+	background-color:#276678;
+}
+
+nav#colored-nav a
+{
+	background-color: #000000;
+}
