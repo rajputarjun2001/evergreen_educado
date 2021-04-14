@@ -121,91 +121,6 @@
     float: right;
 }
 
-@media screen and (max-width: 768px){
-    .buy-container{
-        /* float: left; */
-        width: 100%;
-        text-align: left;
-        padding-left: 30px;
-    }
-    .buy-img{
-        height: 50vh;
-        width: 80vw;
-        margin-left: 8vw;
-    }
-    .sub-heading {
-        text-align: left;
-        margin-right: 0px;
-    }
-    .book-author {
-        text-align: left;
-        padding-right: 0px;
-    }
-    .book-heading {
-        text-align:left;
-        padding-right: 0px;
-    }
-    .stock-status{
-        text-align:left;
-        margin-right: 0px;
-    }
-    #but-1{
-        width: 300px;
-        padding:0px;
-    }
-   .product-info{
-        width: 300px;
-        padding:0px;
-    }
-    .buy-img img{
-        height: 340px ;
-        width: 200px;
-        margin-left: 50px;
-        margin-top: 27px;
-    }
-    .testim .wrap {
-        position: fixed;
-        width: 100%;
-        max-width: 1020px;
-        padding: 40px 20px;
-        background-color: black;
-    }
-}
-
-@media screen and (min-width: 770px){
-    .buy-container{
-        /* float: right;
-        width: 55%; */
-        text-align: left;
-    }
-    .buy-img{
-        margin-left:120px;  
-    }
-    #but-1{
-    width: 550px;
-    text-align: center;
-    padding:8px;
-}
-.product-info{
-    width: 550px;
-}
-.buy-img img{
-    height: 300px;
-    width: 230px;
-    margin-left: 50px;
-    margin-top: 27px;
-}
-.testim .wrap {
-    position: relative;
-    width: 100%;
-    max-width: 1020px;
-    padding: 40px 20px;
-    margin: auto;
-    
-}
-}
-
-
 /* reviews */
     
 
@@ -791,10 +706,158 @@
     }
 }
 
+@media screen and (min-width: 770px){
+    .buy-container{
+        /* float: right;
+        width: 55%; */
+        text-align: left;
+    }
+    .buy-img{
+        margin-left:120px;  
+    }
+    #but-1{
+    width: 550px;
+    text-align: center;
+    padding:8px;
+}
+    .product-info{
+        width: 550px;
+    }
+    .buy-img img{
+        height: 300px;
+        width: 230px;
+        margin-left: 50px;
+        margin-top: 27px;
+    }
+    .testim .wrap {
+        position: relative;
+        width: 100%;
+        max-width: 1020px;
+        padding: 40px 20px;
+        margin: auto;
+        
+    }
+}
+
+@media screen and (max-width: 1320px){
+    .buy-container{
+        margin-left:500px;
+    }
+    .buy-img img{
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .buy-page-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .buy-img{
+        margin:20px auto;
+        display: flex;
+        justify-content: center;
+    }
+    .buy-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .buy-container{
+        /* float: left; */
+        width: 100%;
+        text-align: left;
+        padding-left: 30px;
+    }
+    .buy-img{
+        height: 70vh;
+        width: 50vw;
+        margin-left: 8vw;
+    }
+    .sub-heading {
+        text-align: left;
+        margin-right: 0px;
+    }
+    .book-author {
+        text-align: left;
+        padding-right: 0px;
+    }
+    .book-heading {
+        text-align:left;
+        padding-right: 0px;
+    }
+    .stock-status{
+        text-align:left;
+        margin-right: 0px;
+    }
+    #but-1{
+        width: 300px;
+        padding:0px;
+    }
+   .product-info{
+        width: 300px;
+        padding:0px;
+    }
+    .buy-img img{
+        height: 50vh ;
+        width: 30vw;
+        margin: auto;
+    }
+    .testim .wrap {
+        position: fixed;
+        width: 100%;
+        max-width: 1020px;
+        padding: 40px 20px;
+        background-color: black;
+    }
+
+    .buy-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
 @media all and (max-width: 300px) {
 	body {
 		font-size: 14px;
 	}
+}
+
+@media screen and (max-width: 1093px){
+   .buy-page-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .buy-img{
+        margin: auto;
+    }
+    .buy-container{
+        margin: 50px auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .buy-img img{
+        height: 50vh ;
+        width: 40vw;
+    }
+
+    .buy-img{
+        height: 60vh ;
+        width: 60vw;
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -806,6 +869,15 @@
 		line-height: 25px;
 	}
 
+    .buy-img img{
+        height: 30vh ;
+        width: 30vw;
+    }
+
+    .buy-img{
+        height: 30vh ;
+        width: 20vw;
+    }
 }
 
 .colored-nav{
