@@ -117,7 +117,7 @@
     <section class="one">
     <div class="container">
         <div class="service-heading">
-            <hr><h2>Counter</h2><hr>
+            <hr><h2>Our Statistics</h2><hr>
         </div>
     <br><br>
     <div class="row">
@@ -125,7 +125,7 @@
     <div class="single">
     <div class="inner">
     <h3 class="count counter">5000</h3>
-    <p class="text">Pro</p>
+    <p class="text">Books</p>
     </div>
     </div>
     </div>
@@ -133,8 +133,8 @@
     <div class="col-lg-3">
     <div class="single">
     <div class="inner">
-    <h3 class="count counter">5000</h3>
-    <p class="text">Pro</p>
+    <h3 class="count counter">700</h3>
+    <p class="text">Users</p>
     </div>
     </div>
     </div>
@@ -142,8 +142,8 @@
     <div class="col-lg-3">
     <div class="single">
     <div class="inner">
-    <h3 class="count counter">4000</h3>
-    <p class="text">Pro</p>
+    <h3 class="count counter">400</h3>
+    <p class="text">Books Delievered</p>
     </div>
     </div>
     </div>
@@ -151,8 +151,8 @@
     <div class="col-lg-3">
     <div class="single">
     <div class="inner">
-    <h3 class="count counter">5222</h3>
-    <p class="text">Pro</p>
+    <h3 class="count counter">522</h3>
+    <p class="text">Students Helped </p>
     </div>
     </div>
     </div>
@@ -162,18 +162,24 @@
 </section>
 </section>
     
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+   
     
     <script>
+    var counter = document.querySelectorAll(".counter"); 		
+    var text = document.querySelectorAll(".text");     
+    for(let i=0;i<counter.length;i++){
+        let count=1; 
+        setInterval(() =>{ 			
+            if (count<1000){ 				
+                count++; 				
+                counter[i].innerText = count; 			
+            } 		
+        }, 1);
+    }		
     
-    if($('.counter').length){
-    $('.counter').counterUp({
-    delay:10,
-    time:3000
-    }); 
-    }
+    
     </script>
     
 <br>

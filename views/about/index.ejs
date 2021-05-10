@@ -5,40 +5,36 @@
     <title>About Us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/about_us.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="stylesheets/landing.css" rel="stylesheet" type="text/css" />
-	
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"   href="../stylesheets/bootstrap.min.css">	
+    <link rel="stylesheet"   href="../stylesheets/about_us.css">
+    <link rel="stylesheet"   href="../stylesheets/comp.css"  type="text/css">
   </head>
-<body>
+  <body onload="myFunction()">
+
+    <!-- Preloader-->
+    
+    <div id="loading"><img src="../images/page-loader.gif"></div>
 
 <!-- NAVBAR-->
 
 <nav class="navbar-fixed-top colored-nav" >
 
-    <input id="nav-toggle" type="checkbox">
-    <div class="logo"><a href="/">EverGreen Educado</a></div>
-    <ul class="navlinks">
-        <li> <a href="/"> HOME </a> </li>
-        <li> <a href="/#books-locate"> BOOKS </a> </li>
-        <li> <a href="#"> FUN </a> </li>
-        <li> <a href="/about-us"> ABOUT </a> </li>
-        <li> <a href="/contact-us"> CONTACT </a> </li>
-    </ul>
-    <label for="nav-toggle" class="icon-burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </label>
-	
+  <input id="nav-toggle" type="checkbox">
+  <div class="logo"><a href="/">EverGreen Educado</a></div>
+  <ul class="navlinks">
+      <li> <a href="/"> HOME </a> </li>
+      <li> <a href="/#books-locate"> BOOKS </a> </li>
+      <li> <a href="#"> FUN </a> </li>
+      <li> <a href="/about-us"> ABOUT </a> </li>
+      <li> <a href="/contact-us"> CONTACT </a> </li>
+  </ul>
+  <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+  </label>
+
 </nav>
 
 <br>
@@ -75,51 +71,36 @@
             <span class="text-cursive h5 text-red">The Team</span>
             <h3 class="text-white text-center">Meet The Team</h3>
         </div>
-        <div class="row align-items-stretch">
+        
 
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="post-entry-1 h-100 person-1 teal">
+        <div class="row align-items-stretch">     
+        
+            <div class="col-lg-6 col-md-6 mb-5">
+              <div class="post-entry-1 h-100 person-1 blue">
+                
+                  <img src="../images/sanskriti.jpg" alt="Image"
+                   class="img-fluid">
               
-                <img src="images/person_1.jpg" alt="Image"
-                 class="img-fluid">
-            
-              <div class="post-entry-1-contents">
-                <span class="meta">Founder</span>
-                <h2>Anushka Srivastava</h2>
-                <div class="footer_socialicons">
-                  <ul>
-                      <li><a href="https://github.com/rajputarjun2001"><i class="fa fa-github"></i></a></li>
-                      <li><a href="mailto:srivastavaanushka3@gmail.com"><i class="fa fa-google"></i></a></li>
-                      <li><a href="https://www.linkedin.com/in/anushka-srivastava-0b08b61b1/"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="post-entry-1 h-100 person-1 yellow">
-              
-                <img src="../images/sanskriti.jpg" alt="Image"
-                 class="img-fluid">
-            
-              <div class="post-entry-1-contents">
-                <span class="meta">Founder</span>
-                <h2>Sanskriti Khatiyan</h2>
-                <div class="footer_socialicons">
-                  <ul>
+                <div class="post-entry-1-contents">
+                  <span class="meta">Founder</span>
+                  <h2>Sanskriti Khatiyan</h2>
+                  <div class="footer_socialicons">
+                    <ul>
                       <li><a href="https://github.com/SanskritiKhatiyan"><i class="fa fa-github"></i></a></li>
                       <li><a href="mailto:khatiyan.sanskriti@gmail.com"><i class="fa fa-google"></i></a></li>
                       <li><a href="https://www.linkedin.com/in/sanskriti-khatiyan-54aa361a6/"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-              </div>
+                    </ul>
+                </div>
+                </div>
               </div>
             </div>
-          </div>
+        
 
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="post-entry-1 h-100 person-1 red">
+            
+          <div class="col-lg-6 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 blue">
               
-                <img src="images/person_3.jpg" alt="Image"
+                <img src="../images/Tanuja.png"  alt="Image"
                  class="img-fluid">
             
               <div class="post-entry-1-contents">
@@ -135,11 +116,13 @@
               </div>
             </div>
           </div>
+        </div>
+
           
-		  
-          <div class="col-lg-6 col-md-4 mb-5">
-            <div class="post-entry-1 h-100 person-1 green">
-              <div class="abx">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 blue">
+              
                 <img src="../images/Arjun.png" alt="Image"
                  class="img-fluid">
             
@@ -154,11 +137,10 @@
                   </ul>
               </div>
               </div>
-			  </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-5">
+          <div class="col-lg-6 col-md-6 mb-5">
             <div class="post-entry-1 h-100 person-1 blue">
               
                 <img src="../images/Ashu.jpg" alt="Image"
@@ -177,11 +159,17 @@
               </div>
             </div>
           </div>
-          
-
         </div>
+
+        
       </div>
     </div>
 	</div>
+
+
+
+
+
+  
 
 	<%- include("../partials/footer") %>

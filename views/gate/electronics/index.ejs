@@ -1,9 +1,9 @@
 <%- include("../../partials/header") %>
 
-   <div class="electronics-animation-1">
-       <div class="electronics-animation-1-item">
+   <div class="animation-1">
+       <div class="animation-1-item">
            <img src="../images/bi3.jpeg">
-           <div class="electronics-animation-1-item-text">
+           <div class="animation-1-item-text">
                <h5>Quiz</h5>
                <a href="#">
                 <p> Wanna do some questions.</p>  
@@ -12,9 +12,9 @@
        </div>
 
        
-        <div class="electronics-animation-1-item">
+        <div class="animation-1-item">
             <img src="../images/bi2.jpeg">
-            <div class="electronics-animation-1-item-text">
+            <div class="animation-1-item-text">
                 <h5>Quiz</h5>
                 <a href="#">
                  <p> Wanna do some questions.</p>  
@@ -23,9 +23,9 @@
         </div>
 
         
-            <div class="electronics-animation-1-item">
+            <div class="animation-1-item">
                 <img src="../images/bi1.jpeg">
-                <div class="electronics-animation-1-item-text">
+                <div class="animation-1-item-text">
                     <h5>Quiz</h5>
                     <a href="#">
                      <p> Wanna do some questions.</p>  
@@ -35,68 +35,78 @@
    </div>
 
 
-   <section class="electronics-bookheading">
+   <section class="bookheading">
     <h1>ELECTRONICS</h1>
   </section>
 
-  <section class="electronics-subjects">
+  <section class="subjects">
     <h3>ENGINEERING MATHEMATICS</h3>
   </section>
 
- <div class="electronics-bookbox">
-    <div class="electronics-boxes"><img src="../images/MA1.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/MA2.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/MA3.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/MA4.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/MA5.jpg" alt="" ></div> 
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'EEM'){ %>
+		<div class="boxes">
+			<a href="/gate-electronics/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
- <section class="electronics-subjects">
+ <section class="subjects">
     <h3> ANALOG AND DIGITAL ELECTRONICS </h3>
   </section>
 
-  <div class="electronics-bookbox">
-    <div class="electronics-boxes"><img src="../images/AD1.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/AD2.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/AD3.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/AD4.jpg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/AD5.jpg" alt="" ></div> 
+  <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'EAADE'){ %>
+		<div class="boxes">
+			<a href="/gate-electronics/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>  
     </div>
 
- <section class="electronics-subjects">
+ <section class="subjects">
     <h3> ELECTRICAL MACHINES</h3>
  </section>
 
- <div class="electronics-bookbox">
-    <div class="electronics-boxes"><img src="../images/EM1.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EM2.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EM3.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EM4.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EM5.jpg" alt="" ></div> 
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'EELECM'){ %>
+		<div class="boxes">
+			<a href="/gate-electronics/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
 
-<section class="electronics-subjects">
+<section class="subjects">
     <h3>  ELECTRIC CIRCUITS</h3>
  </section>
 
- <div class="electronics-bookbox">
-    <div class="electronics-boxes"><img src="../images/EC1.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EC2.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EC3.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EC4.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/EC5.jpeg" alt="" ></div> 
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'EEC'){ %>
+		<div class="boxes">
+			<a href="/gate-electronics/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>
  
-<section class="electronics-subjects">
+<section class="subjects">
     <h3>SIGNALS AND SYSTEMS</h3>
  </section>
 
- <div class="electronics-bookbox">
-    <div class="electronics-boxes"><img src="../images/SS1.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/SS2.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/SS3.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/SS4.jpeg" alt="" ></div>
-    <div class="electronics-boxes"><img src="../images/SS5.jpeg" alt="" ></div> 
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'ESAS'){ %>
+		<div class="boxes">
+			<a href="/gate-electronics/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
     </div>    
 
 <%- include("../../partials/footer") %>
